@@ -23,5 +23,5 @@ jobs:
 
       - name: Deploy with sshpass
         run: |
-          sshpass -p 'password' ssh -o StrictHostKeyChecking=no user@172.30.10.122 "sudo rm -rf /var/www/* && sudo mkdir -p /var/www"
+          sshpass -p 'password' ssh -o StrictHostKeyChecking=no albert@172.30.10.122 "sudo rm -rf /var/www/* && sudo mkdir -p /var/www"
           sshpass -p 'password' scp -o StrictHostKeyChecking=no -r dist/* user@your-server-ip:/var/www/
